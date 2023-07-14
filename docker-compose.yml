@@ -4,7 +4,6 @@ services:
 
   wordpress:
     image: wordpress:latest
-    restart: always
     ports:
       - 8080:80
     environment:
@@ -17,7 +16,6 @@ services:
 
   db:
     image: mysql:5.7
-    restart: always
     platform: linux/amd64
     environment:
       MYSQL_DATABASE: wordpress
@@ -26,7 +24,7 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - ./db:/var/lib/mysql
-  
+      
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     restart: always
@@ -34,7 +32,3 @@ services:
       - db
     ports:
       - 8888:80
-
-volumes:
-  wordpress:
-  db:
