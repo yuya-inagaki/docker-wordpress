@@ -22,16 +22,12 @@ docker-compose up wordpress
 
 **コンテナ停止**
 
-````
+```
 docker-compose stop
-```　　　　　　　　　　　
+```
 
 **コンテナ停止＆削除**
 
-````
-
-docker-compose down
-
 ```
-
+docker-compose down
 ```
